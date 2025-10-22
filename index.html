@@ -74,10 +74,11 @@ const students = [
     {id: "msm251001", password: "Msm@251001", name: "Murugan"},
     {id: "msm251002", password: "Msm@251002", name: "Praveen R"},
     {id: "msm251003", password: "Msm@251003", name: "Karthickeyan T"},
+    {id: "msm251004", password: "Msm@251004", name: "VISHNU D"},
 ];
 
 // Add the remaining students as generic ones
-for(let i=4;i<=50;i++){
+for(let i=5;i<=50;i++){
     const num = (1000+i).toString().padStart(3,"0");
     students.push({id:`msm25${num}`, password:`Msm@25${num}`, name:`STUDENT ${i}`});
 }
@@ -182,7 +183,6 @@ function setupDays(){
     document.getElementById("progress-bar").value = progress;
     document.getElementById("progress-text").innerText = `${progress}% Completed`;
 
-    // Show certificate button if 100% progress
     if(progress === 100){
         document.getElementById("cert-btn").classList.remove("hidden");
     } else {
